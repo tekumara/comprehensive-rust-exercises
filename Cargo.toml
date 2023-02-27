@@ -18,3 +18,7 @@ path = "src/health_stats.rs"
 [[bin]]
 name = "points"
 path = "src/points.rs"
+
+[[bin]]
+name = "luhn"
+path = "src/luhn.rs"

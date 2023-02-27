@@ -1,6 +1,3 @@
-// TODO: remove this when you're done with your implementation.
-#![allow(unused_variables, dead_code)]
-
 #[derive(Clone, Debug, Copy, PartialEq)]
 pub struct Point {
     x: i32,
@@ -66,7 +63,7 @@ impl Polygon {
 
         length
     }
-}   
+}
 
 pub struct Circle {
     center: Point,
@@ -182,5 +179,4 @@ mod tests {
     }
 }
 
-#[allow(dead_code)]
 fn main() {}
