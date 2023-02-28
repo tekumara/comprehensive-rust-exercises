@@ -22,3 +22,19 @@ path = "src/points.rs"
 [[bin]]
 name = "luhn"
 path = "src/luhn.rs"
+
+[[bin]]
+name = "traits"
+path = "src/traits.rs"
+
+[[bin]]
+name = "drop"
+path = "src/drop.rs"
+
+[[bin]]
+name = "default"
+path = "src/default.rs"
+
+[[bin]]
+name = "gui"
+path = "src/gui.rs"
