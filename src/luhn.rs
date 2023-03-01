@@ -3,7 +3,7 @@
 
 pub fn luhn(cc_number: &str) -> bool {
     if cc_number.len() == 0 {
-        return false
+        return false;
     }
 
     let mut sum = 0;
@@ -20,8 +20,8 @@ pub fn luhn(cc_number: &str) -> bool {
                 } else {
                     sum += digit;
                 }
-            },
-            _ => continue
+            }
+            _ => continue,
         }
     }
 

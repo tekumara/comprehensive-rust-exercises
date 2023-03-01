@@ -6,7 +6,7 @@ struct Dog {
     name: String,
 }
 
-struct Cat;  // No name, cats won't respond to it anyway.
+struct Cat; // No name, cats won't respond to it anyway.
 
 impl Greet for Dog {
     fn say_hello(&self) {
@@ -22,14 +22,24 @@ impl Greet for Cat {
 
 fn main() {
     let pets: Vec<Box<dyn Greet>> = vec![
-        Box::new(Dog { name: String::from("Fido") }),
+        Box::new(Dog {
+            name: String::from("Fido"),
+        }),
         Box::new(Cat),
     ];
     for pet in pets {
         pet.say_hello();
     }
-    println!("{} {}", std::mem::size_of::<Dog>(), std::mem::size_of::<Cat>());
-    println!("{} {}", std::mem::size_of::<&Dog>(), std::mem::size_of::<&Cat>());
+    println!(
+        "{} {}",
+        std::mem::size_of::<Dog>(),
+        std::mem::size_of::<Cat>()
+    );
+    println!(
+        "{} {}",
+        std::mem::size_of::<&Dog>(),
+        std::mem::size_of::<&Cat>()
+    );
     println!("{}", std::mem::size_of::<&dyn Greet>());
     println!("{}", std::mem::size_of::<Box<dyn Greet>>());
 }

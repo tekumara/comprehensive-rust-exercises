@@ -60,14 +60,13 @@ impl Window {
     }
 }
 
-
 impl Widget for Label {
     fn width(&self) -> usize {
         self.label.len()
     }
 
     fn draw_into(&self, buffer: &mut dyn std::fmt::Write) {
-       buffer.write_str(self.label.as_str()).unwrap();
+        buffer.write_str(self.label.as_str()).unwrap();
     }
 }
 

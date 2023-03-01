@@ -38,3 +38,11 @@ path = "src/default.rs"
 [[bin]]
 name = "gui"
 path = "src/gui.rs"
+
+[[bin]]
+name = "rawpointers"
+path = "src/rawpointers.rs"
+
+[[bin]]
+name = "ffiwrapper"
+path = "src/ffiwrapper.rs"
