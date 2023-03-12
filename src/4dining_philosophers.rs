@@ -22,6 +22,11 @@ impl Philosopher {
     fn eat(&self) {
         // Pick up forks...
 
+        // this solution seems to work but I'm not sure if it is correct?
+        // NB: this differs from the official solution which don't use try
+        // and uses a resource hierarchy to avoid deadlock (which might leave to starvation
+        // of a philosopher)
+        // see https://google.github.io/comprehensive-rust/exercises/day-4/solutions-morning.html
         match (self.left_fork.try_lock(), self.right_fork.try_lock()) {
             (Ok(_), Ok(_)) => {
                 println!("{} is eating...", &self.name);
@@ -38,13 +43,9 @@ static PHILOSOPHERS: &[&str] = &["Socrates", "Plato", "Aristotle", "Thales", "Py
 
 fn main() {
     // Create forks
-    let forks = [
-        Arc::new(Mutex::new(Fork)),
-        Arc::new(Mutex::new(Fork)),
-        Arc::new(Mutex::new(Fork)),
-        Arc::new(Mutex::new(Fork)),
-        Arc::new(Mutex::new(Fork)),
-    ];
+    let forks = (0..PHILOSOPHERS.len())
+        .map(|_| Arc::new(Mutex::new(Fork)))
+        .collect::<Vec<_>>();
 
     let (tx, rx) = mpsc::channel();
 
