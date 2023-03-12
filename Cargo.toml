@@ -1,3 +1,9 @@
+[workspace]
+
+members = [
+    "link-checker",
+]
+
 [package]
 name = "exercise"
 version = "0.1.0"
@@ -33,7 +39,7 @@ path = "src/3gui.rs"
 
 [[bin]]
 name = "3drop"
-path = "src/drop.rs"
+path = "src/3drop.rs"
 
 [[bin]]
 name = "3default"
