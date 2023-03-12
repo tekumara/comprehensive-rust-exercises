@@ -24,25 +24,53 @@ name = "luhn"
 path = "src/luhn.rs"
 
 [[bin]]
-name = "traits"
-path = "src/traits.rs"
+name = "3traits"
+path = "src/3traits.rs"
 
 [[bin]]
-name = "drop"
+name = "3gui"
+path = "src/3gui.rs"
+
+[[bin]]
+name = "3drop"
 path = "src/drop.rs"
 
 [[bin]]
-name = "default"
-path = "src/default.rs"
+name = "3default"
+path = "src/3default.rs"
 
 [[bin]]
-name = "gui"
-path = "src/gui.rs"
+name = "3rawpointers"
+path = "src/3rawpointers.rs"
 
 [[bin]]
-name = "rawpointers"
-path = "src/rawpointers.rs"
+name = "3ffiwrapper"
+path = "src/3ffiwrapper.rs"
 
 [[bin]]
-name = "ffiwrapper"
-path = "src/ffiwrapper.rs"
+name = "4threads"
+path = "src/4threads.rs"
+
+[[bin]]
+name = "4channels"
+path = "src/4channels.rs"
+
+[[bin]]
+name = "4channels_unbounded"
+path = "src/4channels_unbounded.rs"
+
+[[bin]]
+name = "4channels_bounded"
+path = "src/4channels_bounded.rs"
+
+[[bin]]
+name = "4arc"
+path = "src/4arc.rs"
+
+[[bin]]
+name = "4mutex"
+path = "src/4mutex.rs"
+
+[[bin]]
+name = "4shared_state_example"
+path = "src/4shared_state_example.rs"
