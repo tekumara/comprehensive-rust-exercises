@@ -74,3 +74,7 @@ path = "src/4mutex.rs"
 [[bin]]
 name = "4shared_state_example"
 path = "src/4shared_state_example.rs"
+
+[[bin]]
+name = "4dining_philosophers"
+path = "src/4dining_philosophers.rs"
